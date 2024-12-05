@@ -1,0 +1,55 @@
+@baseUrl = http://localhost:3333/api
+
+### Criar Usuário
+# @name create_user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "securepassword",
+  "aboutMe": "I love backend development",
+  "birthdate": "1995-05-15T00:00:00.000Z",
+  "address": {
+    "street": "123 Main St",
+    "city": "Metropolis",
+    "state": "NY",
+    "zip": "12345"
+  }
+}
+
+###
+
+### Listar Todos os Usuários
+# @name get_users
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+###
+
+### Buscar Usuário por ID
+# @name get_user
+GET {{baseUrl}}/users/1
+Content-Type: application/json
+
+###
+
+### Atualizar Usuário
+# @name update_user
+PATCH {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+  "aboutMe": "I love fullstack development",
+  "address": {
+    "city": "Gotham",
+    "state": "CA"
+  }
+}
+
+###
+
+### Deletar Usuário
+# @name delete_user
+DELETE {{baseUrl}}/users/1
+Content-Type: application/json

@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "wizardData" JSONB NOT NULL DEFAULT '{}',
+ADD COLUMN     "wizardStep" INTEGER NOT NULL DEFAULT 0;
